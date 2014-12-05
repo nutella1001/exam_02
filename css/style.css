@@ -74,17 +74,19 @@ body{
 	padding: 47px 0 37px;
 	
 }
+a,i, .button{
+	-webkit-transition: color .3s ease, background-color .3s ease;
+ 	-moz-transition: color .3s ease, background-color .3s ease;
+ 	-ms-transition: color .3s ease, background-color .3s ease;
+ 	-o-transition: color .3s ease, background-color .3s ease;
+ 	transition: color .3s ease, background-color .3s ease;	
+}
 .menu a{
 	color: #637076;
 	text-transform: uppercase;
 	font-size: 24px;
 	text-decoration: none;
 	font-family: Lato, Arial, sans-serif;
-	-webkit-transition: color .2s ease, background-color .2s ease;
- 	-moz-transition: color .2s ease, background-color .2s ease;
- 	-ms-transition: color .2s ease, background-color .2s ease;
- 	-o-transition: color .2s ease, background-color .2s ease;
- 	transition: color .2s ease, background-color .2s ease;	
 }
 .menu a:hover{
 	color: #ffffff;	
@@ -196,6 +198,11 @@ input[type='search']{
 	padding: 28px 45px 25px 48px;
 	text-transform: uppercase;
 }
+.header-bottom .button:hover{
+	color: #ff5722;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-color: transparent;
+}
 .expect{
 	background-image: url('../img/pattern.jpg');
 	padding: 130px 0 110px;
@@ -244,6 +251,11 @@ span.bold{
 	text-decoration: none;
 	font-size: 15px;
 	display: inline-block;
+}
+.expect .button:hover{
+	color: #ffffff;
+	background-color: rgba(255, 48, 0, 1);
+	border-color: transparent;
 }
 .expect p{
 	font-size: 14px;
@@ -346,7 +358,6 @@ blockquote{
 	margin-bottom: 95px;
 	
 }
-
 .customers h2{
 	font-weight: 300;
 	font-size: 72px;
@@ -360,6 +371,12 @@ blockquote{
 	text-transform: uppercase;
 	padding-bottom: 25px;
 	font-weight: 700;
+}
+.slider-blockqoute{
+	width: 100%;
+}
+.customers .slide-1{
+	width: 100%;
 }
 blockquote p{
 	font-style: italic;
@@ -388,6 +405,9 @@ blockquote img{
 	font-size: 63px;
 	color: #93908a;
 } 
+.arrow .prev:hover, .arrow .next:hover{
+	color: #fe4f00;
+}
 .gallery{
 	background-image: url('../img/pattern.jpg');
 	padding: 78px 0 26px;
@@ -403,6 +423,9 @@ blockquote img{
 .gallery img:last-child{
 	margin-top: 30px;
 }
+.gallery img:hover{
+	opacity:0.8;
+}
 .news{
 	padding-top: 30px;
 }
@@ -410,6 +433,12 @@ blockquote img{
 	font-weight: 900;
 	font-size: 30px;
 	color: #ff5722;
+}
+.gallery .slide-1{
+	width: 100%;
+}
+.slider-gallery{
+	width: 100%;
 }
 .article h5{
 	font-size: 18px;
@@ -430,16 +459,23 @@ blockquote img{
 	color: #93908a;
 	text-decoration: none;
 }
+.article .learn:hover{
+	color: #ff5722;
+}
 .circles{
 	padding: 26px 0  0 20px;
+	display: inline-block;
 }
-.circle{
+.circle1, .circle2{
 	display: inline-block;
 	border-radius: 50%;
 	background-color: #93908a;
 	width: 24px;
 	height: 24px;
 	padding-left: 10px;	
+}
+.circle1:hover, .circle2:hover{
+	background-color: #ff5722;
 }
 .progress-bar{
 	background: url('../img/bath.jpg');
@@ -448,7 +484,28 @@ blockquote img{
 .accordions{
 	border: 1px solid #ffffff;
 }
-
+[id*="lot-"]{
+	display: none;
+}
+/*
+.accordion{
+	margin-top: -1px;
+}*/
+.accordion, .title{
+	border: 1px solid #fff;
+	width: 100%;
+	padding: 10px 30px 10px 55px; 
+	position: relative;
+}
+.title{
+	visibility: hidden;
+	overflow: hidden;
+	margin-top: -1px;
+	margin-bottom: -2px;
+}
+.title p{
+	
+}
 .bar{
 	background-color: #e4e1d9;
 	color: #ffffff;
@@ -502,6 +559,11 @@ blockquote img{
 	font-size: 18px;
 	padding: 17px 33px 15px 33px;
 }
+.proin .button:hover{
+	color: #ff5722;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-color: transparent;
+}
 .call-now{
 	background-color: #03a9f4;
 	color: #ffffff;
@@ -545,6 +607,11 @@ blockquote img{
 	font-size: 28px;
 	margin-left: 5px;
 }
+.socials i:hover{
+	color: #ffffff;
+	background-color: #263238;;
+	
+}
 .wrap{
 	width: 950px;
 	padding: 0 30px;
@@ -565,7 +632,8 @@ blockquote img{
 	font-family: Lato, Arial, sans-serif;
 }
 .wrap textarea[name="message"]{
-	width: 100%;	
+	width: 100%;
+	height: 200px;	
 	padding: 18px 0 0 26px;
 	background-color: transparent;
 	border-radius: 3px;
@@ -590,4 +658,38 @@ blockquote img{
 	font-family: Lato, Arial, sans-serif;
 	font-size: 28px;
 	padding: 28px 75px;
+}
+.wrap .button:hover{
+	color: #ffffff;
+	background-color: rgba(255, 48, 0, 1);
+	border-color: transparent;
+}
+.copyright{
+	background-color: #263238;
+	padding: 95px 0 85px;
+	text-align: center;
+}
+.copyright p{
+	font-size: 18px;
+	color: #ffffff;
+	font-family: Lato, Arial, sans-serif;
+}
+.copyright .text-red{
+	color: #e00f19;
+}
+.copyright a{
+	color: #3486cb;
+	text-decoration: none;
+	position: relative;
+	padding: 0 5px 0 40px;
+}
+.copyright a:before{
+	content:'';
+	background: url('../img/tamplatemonster.png') no-repeat;
+	width: 29px;
+	height: 28px;
+	position: absolute;
+	left: 5px;
+	top: -2px;
+	
 }
